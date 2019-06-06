@@ -39,7 +39,6 @@ mock, assertMock := (&MyInterfaceMocker{}).Describe().
 	Mock()
 defer assertMock(t)
 
-// assert.Panics(t, func() {
 _, _ = mock.ShouldBeFun(789, m)
 ```
 
