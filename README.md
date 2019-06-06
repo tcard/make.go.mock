@@ -1,4 +1,4 @@
-# make.go.mock [![Build Status](https://secure.travis-ci.org/tcard/make.go.mock.svg?branch=master)](http://travis-ci.org/tcard/make.go.mock) [![GoDoc](https://godoc.org/github.com/tcard/make.go.mock?status.svg)](https://godoc.org/github.com/tcard/make.go.mock) [![codecov](https://codecov.io/gh/tcard/make.go.mock/branch/master/graph/badge.svg?token=)](https://codecov.io/gh/tcard/make.go.mock)
+# make.go.mock [![Build Status](https://secure.travis-ci.org/tcard/make.go.mock.svg?branch=master)](http://travis-ci.org/tcard/make.go.mock) [![GoDoc](https://godoc.org/github.com/tcard/make.go.mock?status.svg)](https://godoc.org/github.com/tcard/make.go.mock)
 
 Command make.go.mock generates type-safe mocks for Go interfaces and functions.
 
