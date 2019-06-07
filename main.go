@@ -16,6 +16,7 @@ func main() {
 	as := flag.String("as", "", "base name for generated identifiers; leave blank for default")
 	dst := flag.String("dst", "", "path of the generated file; pass a dir for default file name; leave black for same dir")
 	dstPkgName := flag.String("dstpkg", "", "package name for the generated file; leave blank to infer")
+	bare := flag.Bool("bare", false, "don't generate the big declarative descriptors, just a bare bones mock")
 	verbose := flag.Bool("v", false, "verbose mode")
 	flag.Parse()
 
@@ -30,6 +31,7 @@ func main() {
 		os.Getenv("GOFILE"),
 		os.Getenv("GOPACKAGE"),
 		*typeName,
+		*bare,
 	)
 	nilOrExit(err, "%s")
 

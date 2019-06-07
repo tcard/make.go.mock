@@ -18,7 +18,7 @@ import (
 //go:generate make.go.mock -v -type MyInterface -as DifferentName
 //go:generate make.go.mock -v -type MyInterface -as MyInterfaceInCustomFile -dst custom_file_name_test.go
 //go:generate make.go.mock -v -type MyInterface -dst generated/generated.go
-//go:generate make.go.mock -v -type MyInterface -dst generated -dstpkg generated_test
+//go:generate make.go.mock -v -type MyInterface -dst generated -dstpkg generated_test -bare
 
 type MyInterface interface {
 	Embedded
@@ -37,6 +37,6 @@ type MyStruct struct {
 	File      *os.File
 }
 
-//go:generate make.go.mock -v -type MyFunc
+//go:generate make.go.mock -v -type MyFunc -dst generated/generated_func.go
 
 type MyFunc func(a, b, c int, x bool, multi ...MyStruct) (ok bool, err error)
