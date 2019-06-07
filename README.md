@@ -40,7 +40,7 @@ make.go.mock -h
 
 See [examples/examples.go](https://github.com/tcard/make.go.mock/tree/master/examples/examples.go) for actual examples of `go:generate` directives.
 
-Check out also [a full example in the docs](https://godoc.org/github.com/tcard/make.go.mock/examples#ex-package), or [the generated API for the examples package](https://godoc.org/github.com/tcard/make.go.mock/examples/generated).
+Check out also [a full example in the docs](https://godoc.org/github.com/tcard/make.go.mock/examples#example-package), or [the generated API for the examples package](https://godoc.org/github.com/tcard/make.go.mock/examples/generated).
 
 ## Failure feedback
 
