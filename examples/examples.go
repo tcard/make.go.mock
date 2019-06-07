@@ -40,3 +40,10 @@ type MyStruct struct {
 //go:generate make.go.mock -v -type MyFunc -dst generated/generated_func.go
 
 type MyFunc func(a, b, c int, x bool, multi ...MyStruct) (ok bool, err error)
+
+//go:generate make.go.mock -v -type KeyValuesRepository -dst mock_KeyValuesRepository.go
+
+type KeyValuesRepository interface {
+	Get(key string) (int, error)
+	Put(key string, value int) error
+}

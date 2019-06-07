@@ -2,6 +2,24 @@
 
 Command make.go.mock generates type-safe mocks for Go interfaces and functions.
 
+It looks like this:
+
+```go
+repo, assertMock := (&KeyValuesRepositoryMocker{}).Describe().
+	Get().Takes("foo").Returns(42, nil).Times(1).
+	Put().Takes("foo").And(43).Returns(nil).Times(1).
+	Mock()
+defer assertMock(t)
+
+err := IncreaseCounter(repo, "foo")
+```
+
+Some core principles behind make.go.mock are:
+
+* **Mock code should be maintainable**. It doesn't use `interface{}`. It doesn't reflect. As hand-written Go code would, it leverages Go's typechecker to get compile time errors when things don't match. It creates clear stack traces when things go wrong, with no indirection or complex helper functions in the middle.
+* **Mock code should be readable**. The generated API is kind of verbose, but reads natural, has clear names and well-documented components.
+* **Be flexible**. Basic "any" and "equal" matchers are provided, but you can also provide your custom matchers. Or just pass the `-bare` flag to get a bare minimum mock and do everything yourself.
+
 ## Installing
 
 ```
